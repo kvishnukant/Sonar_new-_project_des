@@ -78,7 +78,7 @@ public class IssuesDensityDecorator implements Decorator {
   }
 
   protected static double calculate(int debt, int ncloc) {
-    double rci = (1.0 - ((double) debt / (double) ncloc)) * 100.0;
+    double rci = (1.0 - ( debt / ncloc)) * 100.0;
     rci = Math.max(rci, 0.0);
     return rci;
   }

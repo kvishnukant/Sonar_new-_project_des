@@ -48,6 +48,8 @@ public final class IssuesDensityMetrics implements Metrics {
     .setOptimizedBestValue(true)
     .create();
 
+  
+  @Override
   public List<Metric> getMetrics() {
     return Lists.<Metric>newArrayList(ISSUES_DENSITY, WEIGHTED_ISSUES);
   }

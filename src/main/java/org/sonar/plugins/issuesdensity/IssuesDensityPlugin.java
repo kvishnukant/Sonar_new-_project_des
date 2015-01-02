@@ -33,6 +33,7 @@ public class IssuesDensityPlugin extends SonarPlugin {
   public static final String WEIGHTED_ISSUES_PROPERTY = "sonar.issuesdensity.weight";
   private static final String WEIGHTED_ISSUES_DEFAULT_VALUE = "INFO=0;MINOR=1;MAJOR=3;CRITICAL=5;BLOCKER=10";
 
+  @Override
   public List getExtensions() {
     return ImmutableList.of(
       IssuesDensityMetrics.class,

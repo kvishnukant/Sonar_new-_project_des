@@ -77,7 +77,7 @@ public class IssuesDensityDecorator implements Decorator {
     context.saveMeasure(IssuesDensityMetrics.ISSUES_DENSITY, density);
   }
 
-  protected static double calculate(int debt, int ncloc) {
+  protected static double calculate(double debt, double ncloc) {
     double rci = (1.0 - ( debt / ncloc)) * 100.0;
     rci = Math.max(rci, 0.0);
     return rci;
